@@ -6,8 +6,9 @@ Useful Excel Formulas &amp; VBA
 
 Simple formula to convert a range into a list in one column
 
-<code>=INDEX(Data,1+INT((ROW(A1)-1)/COLUMNS(Data)),MOD(ROW(A1)-1+COLUMNS(Data),COLUMNS(Data))+1)</code>
-
+```
+=INDEX(Data,1+INT((ROW(A1)-1)/COLUMNS(Data)),MOD(ROW(A1)-1+COLUMNS(Data),COLUMNS(Data))+1)
+```
 
 <h2>Multi Replace</h2>
 
@@ -16,6 +17,8 @@ VBA Macro to make a series of find and replaces from lists
 - MatchCase can be changed to True to only change when case matches
 - xlPart can be changed to xlWhole to only replace an exact cell
 
+
+```
 Sub MultiReplace()
 On Error GoTo errorcatch
 Dim arrRules() As Variant
@@ -36,5 +39,5 @@ Dim arrRules() As Variant
 
 errorcatch:
 End Sub
-
+```
 
